@@ -1,7 +1,7 @@
 .main{
     border: 1px solid black;
-    width: 98vw;
-    height: 80vh;
+    width: 50vw;
+    height: 50vw;
     
 }
 body{
@@ -16,7 +16,7 @@ body{
 }
 .buttons{
     display: flex;
-    width: 80vw;
+    width: 50vw;
     justify-content:space-between;
     flex: auto;
 }
@@ -36,7 +36,7 @@ button{
     align-self: center;
 }
 .reset{
-    margin-left: 90px;
+    margin-left: 50px;
     background-color: #f44336;
 }
 .main{
@@ -47,6 +47,6 @@ button{
 }
 .main div{
     width: 100%;
-    height: auto;
-
+    
+    
 }
