@@ -47,6 +47,7 @@ button{
 }
 .main div{
     width: 100%;
+    opacity: 0.1;
     
     
 }
