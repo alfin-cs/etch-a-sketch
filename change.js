@@ -24,19 +24,26 @@ function createDiv(){
         main.appendChild(a)
     }
 }
+function opacityIncrease(cell){
+    if (cell.style.opacity){
+        cell.style.opacity=Number(cell.style.opacity)+0.1
+    }else{
+        cell.style.opacity=0.1
+    }
+}
 
-
-let b=document.querySelectorAll(".b")
-console.log(b)
 main.addEventListener("mouseover",(event)=>{
+    let cell=event.target
     if (!isActive){
-        if (event.target!=main){
-            event.target.style.backgroundColor=`black`
-            event.target.style.opacity=`${(event.target.style.opacity)+0.1}`
+        if (cell!=main){
+            cell.style.backgroundColor=`#000000`
+            opacityIncrease(cell)
         }
     }else{
-        if (event.target!=main){
-            event.target.style.background=`#${(Math.floor(Math.random()*1000000)).toString().padStart(6,"0")}`
+        if (cell!=main){
+            
+            cell.style.background=`#${(Math.floor(Math.random()*1000000)).toString().padStart(6,"0")}`
+            opacityIncrease(cell)
         }
     }
     
@@ -60,5 +67,5 @@ rainbow.addEventListener("click", () => {
   isActive = !isActive;
 });
 
-//event.target.style.background=`#${(Math.floor(Math.random()*1000000)).toString().padStart(6,"0")}`
+//cell.style.background=`#${(Math.floor(Math.random()*1000000)).toString().padStart(6,"0")}`
 //for rainbow mode
